@@ -1,5 +1,8 @@
 'use client';
 
+import { useState } from 'react';
+
+import Modal from './components/Modal/Modal';
 import Project from './components/Project/Project';
 import './page.css';
 
@@ -27,11 +30,18 @@ const projects = [
 ];
 
 export default function Home() {
+  const [modal, setModal] = useState({ active: false, index: 0 });
+
   return (
     <main className='flex items-center justify-center'>
       <div className='projects_wrap'>
-        {projects.map((project, i) => {
-          return <Project key={i} project={project} />;
+        {projects.map((project, index) => {
+          return (
+            <div key={index} className='relative'>
+              <Modal modal={modal} index={index} />
+              <Project project={project} index={index} setModal={setModal} />
+            </div>
+          );
         })}
       </div>
     </main>
