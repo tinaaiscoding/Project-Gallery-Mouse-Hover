@@ -33,17 +33,20 @@ export default function Home() {
   const [modal, setModal] = useState({ active: false, index: 0 });
 
   return (
-    <main className='flex items-center justify-center'>
-      <div className='projects_wrap'>
+    <main className='projects_wrap flex items-center justify-center'>
+      <div className='projects_list_wrap flex flex-col items-center justify-center'>
         {projects.map((project, index) => {
           return (
-            <div key={index} className='relative'>
-              <Modal modal={modal} index={index} />
-              <Project project={project} index={index} setModal={setModal} />
-            </div>
+            <Project
+              key={index}
+              project={project}
+              index={index}
+              setModal={setModal}
+            />
           );
         })}
       </div>
+      <Modal modal={modal} projects={projects} />
     </main>
   );
 }

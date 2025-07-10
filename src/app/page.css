@@ -1,7 +1,7 @@
-main {
+.projects_wrap {
   height: 100vh;
 }
 
-.projects_wrap {
+.projects_list_wrap {
   width: 1000px;
 }

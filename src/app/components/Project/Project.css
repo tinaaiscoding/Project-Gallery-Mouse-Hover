@@ -1,5 +1,6 @@
 .project_wrap {
   border-top: 1px solid rgb(201, 201, 201);
+  width: 100%;
 }
 
 .project_wrap:last-of-type {
