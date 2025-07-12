@@ -22,3 +22,21 @@
 .modal_wrap img {
   height: auto;
 }
+
+.cursor,
+.cursor_label {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  pointer-events: none;
+  background-color: #455ce9;
+  border-radius: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor_label {
+  background-color: transparent;
+}
